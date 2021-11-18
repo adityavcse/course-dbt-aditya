@@ -21,35 +21,3 @@ sources:
         description: >
           Contains demographic information about each superhero
 
-      - name: users
-        loaded_at_field: created_at
-        description : >
-           Contains users name and contact information
-      
-      - name: addresses
-        description : >
-            Contains address, zipcode and country details
-        
-      - name: events
-        loaded_at_field: created_at
-        description: >
-             Captures event details like session, event_type, pageurl etc
-            
-      - name: orders
-        description: >
-             Has detailed information of all orders and a reference keys of all other tables
-
-      - name: order_items
-        description : >
-              Has details of the ordered items like product_id and quantity
-
-      - name: products
-        description: >
-              Has product level information - name, price and quantity
-
-      - name: promos
-        description : > 
-              Has details of the promotions for orders applicable
-        
-
-

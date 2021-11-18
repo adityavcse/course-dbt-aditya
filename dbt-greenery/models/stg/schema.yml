@@ -1,0 +1,39 @@
+
+version: 2
+
+models:
+  - name: stg_orders
+    description: Contains order information of greenery
+    columns:
+      - name: created_at_utc
+        tests: 
+          - not_null
+      - name: order_cost
+        tests:
+          - positive_values
+      - name: user_id
+        tests:
+          - relationships:
+              to: ref('stg_users')
+              field: user_id
+          
+  - name: stg_users
+    description: Contains customers information of greenery users
+    columns:
+      - name: address_id
+        tests: 
+          - relationships: 
+              to: ref('stg_addresses')
+              field: address_id
+
+  - name: stg_order_items
+    description: Contains order information of greenery
+    columns:
+      - name: product_id
+        tests:
+         - relationships:
+              to: ref('stg_products')
+              field: product_id
+           
+
+          

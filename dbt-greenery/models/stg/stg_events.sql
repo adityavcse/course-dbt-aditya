@@ -10,6 +10,6 @@ session_id,
 user_id,
 event_type,
 page_url,
-created_at
+created_at as created_at_utc
 FROM
-{{ source('tutorial', 'events') }}
+{{ source('greenery', 'events') }}

@@ -9,4 +9,4 @@ order_id,
 product_id,
 quantity
 FROM
-{{ source('tutorial', 'order_items') }}
+{{ source('greenery', 'order_items') }}

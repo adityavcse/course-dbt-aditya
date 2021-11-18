@@ -11,4 +11,4 @@ zipcode,
 state,
 country
 FROM
-{{ source('tutorial', 'addresses') }}
+{{ source('greenery', 'addresses') }}

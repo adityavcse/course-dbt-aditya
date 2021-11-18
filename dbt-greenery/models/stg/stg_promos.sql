@@ -7,5 +7,5 @@
 SELECT
 promo_id,
 discout as discount,
-status
+status as promo_status
 FROM {{ source('greenery', 'promos') }}

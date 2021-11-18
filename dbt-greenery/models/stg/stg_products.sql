@@ -6,8 +6,8 @@
 
 SELECT
 product_id,
-name,
+name as product_name,
 price,
 quantity
 FROM
-{{ source('tutorial', 'products') }}
+{{ source('greenery', 'products') }}
