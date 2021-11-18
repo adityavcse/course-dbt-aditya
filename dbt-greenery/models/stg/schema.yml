@@ -5,6 +5,10 @@ models:
   - name: stg_orders
     description: Contains order information of greenery
     columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
       - name: created_at_utc
         tests: 
           - not_null
@@ -20,6 +24,10 @@ models:
   - name: stg_users
     description: Contains customers information of greenery users
     columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
       - name: address_id
         tests: 
           - relationships: 
@@ -36,4 +44,28 @@ models:
               field: product_id
            
 
-          
+  - name: stg_addresses
+    description : This table contains address information
+    columns: 
+      - name: address_id
+        description: unique identifier for an address
+        tests:
+         - unique
+         - not_null
+
+  - name: stg_promos
+    description: This table contians information about promos in greenery
+    columns:
+      - name: promo_id
+        description: unique id to identify promo
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_events
+    description: This table contians information about user events in greenery
+    columns:
+      - name: user_id
+        description: unique id to users 
+        tests:
+          - not_null
