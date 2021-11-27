@@ -1,0 +1,95 @@
+
+version: 2
+
+models:
+  - name: fact_user_orders
+    description: fact table users and their order information
+    columns:
+      - name: user_id
+        description: field to uniquely identify a user_id
+        tests: 
+          - unique
+          - not_null
+      - name: total_order_count
+        description: Total number of orders made by the user_id      
+      - name: promo_orders_count
+        description: total number of orders made by the user with a promo code
+      - name: pending_orders_count
+        description: total number of orders made by user that are in  pending status
+      - name: shipped_orders_count
+        description: total number of orders made by user that are in  Shipped status
+      - name: delivered_orders_count
+        description: total number of orders made by user that are in  delivered status
+      - name: preparing_orders_count
+        description: total number of orders made by user that are in  preparing status
+      - name: early_delivery_count
+        description: total number of orders made by user that are delivered before estimated_delivered_time
+      - name: late_delivery_count
+        description: total number of orders made by user that are delivered after estimated_delivered_time
+      - name: ontime_delivery_count
+        description: total number of orders made by user that are delivered on estimated_delivered_time
+      - name: order_total
+        description : The sum of all orders made by the user at greenery. lifetime value
+      - name: first_order_date
+        description: The date when the user made his/her first order
+      - name: account_created_date
+        description: The date when the user created his account in greenery.
+
+  - name: int_order_summary
+    description: contains the order summary details. This is an intermediate table
+    columns: 
+      - name: order_id
+        description: Uniquely identifies an order for greenery
+        tests: 
+          - unique
+          - not_null
+      - name: user_id
+        description: identify which user placedd this order
+        tests:
+          - not_null
+      - name: promo_order
+        description: set to 1 if the order was made under a promotion
+        tests:
+          - accepted_values:
+              values: [0,1]
+      - name: pending_orders_count
+        description: flag to identify if the order is in pending state
+        tests:
+          - accepted_values:
+              values: [0.1]
+      - name: delivered_orders_count
+        description: flag to identify if the order is delivered
+        tests:
+          - accepted_values:
+              values: [0.1]
+
+
+      - name: shipped_orders_count
+        description: flag to identify if the order is shipped
+        tests:
+          - accepted_values:
+              values: [0.1]
+      - name: preparing_orders_count
+        description: flag to identify if the order is being prepared
+        tests:
+          - accepted_values:
+              values: [0.1]
+
+      - name: early_delivery
+        description: flag to identify if the order was delivered early
+        tests:
+          - accepted_values:
+              values: [0.1]
+
+
+      - name: late_delivery
+        description: flag to identify if the order was delivered late 
+        tests:
+          - accepted_values:
+              values: [0.1]
+      
+      - name: ontime_delivery
+        description: flag to identify if the order was delivered on time
+        tests:
+          - accepted_values:
+              values: [0.1]
