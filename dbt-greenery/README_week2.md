@@ -30,6 +30,7 @@ Also with the fact_user_order , I am able to answer lot of questions like how ma
 
 
 The model/ the final tables etc  can be improved through further iterations.
+I am thinking of adding a new dimension for shipments
 
 
 
