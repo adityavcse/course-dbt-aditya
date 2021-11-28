@@ -26,9 +26,9 @@ addr as (
     country from {{ref ("stg_addresses")}}
 )
 
-select * from users
+--select * from users
 
-/*select 
+select 
 a.user_id,
 a.first_name,
 a.last_name,
@@ -41,4 +41,3 @@ b.address,
 b.zipcode,
 b.state,
 b.country from users a JOIN addr b using(address_id)
-*/

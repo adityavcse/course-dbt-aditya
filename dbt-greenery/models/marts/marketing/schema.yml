@@ -56,40 +56,40 @@ models:
         description: flag to identify if the order is in pending state
         tests:
           - accepted_values:
-              values: [0.1]
+              values: [0,1]
       - name: delivered_orders_count
         description: flag to identify if the order is delivered
         tests:
           - accepted_values:
-              values: [0.1]
+              values: [0,1]
 
 
       - name: shipped_orders_count
         description: flag to identify if the order is shipped
         tests:
           - accepted_values:
-              values: [0.1]
+              values: [0,1]
       - name: preparing_orders_count
         description: flag to identify if the order is being prepared
         tests:
           - accepted_values:
-              values: [0.1]
+              values: [0,1]
 
       - name: early_delivery
         description: flag to identify if the order was delivered early
         tests:
           - accepted_values:
-              values: [0.1]
+              values: [0,1]
 
 
       - name: late_delivery
         description: flag to identify if the order was delivered late 
         tests:
           - accepted_values:
-              values: [0.1]
+              values: [0,1]
       
       - name: ontime_delivery
         description: flag to identify if the order was delivered on time
         tests:
           - accepted_values:
-              values: [0.1]
+              values: [0,1]
