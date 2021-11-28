@@ -30,3 +30,9 @@ Also with the fact_user_order , I am able to answer lot of questions like how ma
 
 
 The model/ the final tables etc  can be improved through further iterations.
+
+
+
+Lineage: 
+
+![image](https://user-images.githubusercontent.com/2854207/143728004-e0330389-7363-44a8-82b0-3d1ed0cbe85a.png)
