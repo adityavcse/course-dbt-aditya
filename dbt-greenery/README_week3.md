@@ -34,6 +34,9 @@ INNER JOIN stg_order_items b using(product_id)
 group by 1
 )
 
+![image](https://user-images.githubusercontent.com/2854207/144750131-f9dc874f-1d6c-4d43-9bd2-8b90135890e9.png)
+
+
 
 DAG
 ---
@@ -44,4 +47,3 @@ select product_id, num_orders*100.0/num_visits as product_conversion from produc
 order by 2 desc 
 
 
-![image](https://user-images.githubusercontent.com/2854207/144750131-f9dc874f-1d6c-4d43-9bd2-8b90135890e9.png)
