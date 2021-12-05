@@ -5,6 +5,7 @@
     )
 }}
 
+
 with users as (
 
 select * from {{ref ("stg_users")}}
@@ -20,6 +21,8 @@ account_created as (
     from {{ref ("stg_events")}} where event_type='account_created'
     group by user_id
 )
+
+
 
 select 
 a.user_id,
