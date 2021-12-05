@@ -33,6 +33,13 @@ from stg_events
 INNER JOIN stg_order_items b using(product_id)
 group by 1
 )
+
+
+DAG
+---
+
+![image](https://user-images.githubusercontent.com/2854207/144750483-8c5c1dde-260d-46da-8bd9-03a65ac5ffaf.png)
+
 select product_id, num_orders*100.0/num_visits as product_conversion from product_conversion_metric
 order by 2 desc 
 
