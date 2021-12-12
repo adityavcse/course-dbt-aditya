@@ -39,3 +39,6 @@ sum(packages_shipped)*100.0/count(*) as shipped_percent
 
 
 
+Updated DAG shows how the exposures are displayed
+
+![image](https://user-images.githubusercontent.com/2854207/145714595-f8584f19-b966-47b8-a5c2-023437ea580b.png)
