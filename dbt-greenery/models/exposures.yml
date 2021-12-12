@@ -1,0 +1,17 @@
+version: 2
+
+exposures:
+  
+  - name: product funnel 
+    type: dashboard
+    maturity: high
+    description: >
+      The dashboard contains the product funnel metrics
+    
+    depends_on:
+      - ref('fact_product_funnel')
+      
+      
+    owner:
+      name: Aditya V 
+      email: adityavcse@gmail.com
